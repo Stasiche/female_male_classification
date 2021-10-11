@@ -3,9 +3,8 @@ import sklearn
 from sklearn.metrics import accuracy_score, f1_score, matthews_corrcoef
 
 
-def calc_scores(clf, X, y):
+def calc_scores(y, preds):
 # Вычисление метрик
-    preds = clf.predict(X)
     return {
         'accuracy': np.round(accuracy_score(y, preds), 3),
         'f1': np.round(f1_score(y, preds), 3),
@@ -42,7 +41,7 @@ def cross_val(clf, readers, dataset, kf, decomposer, ffi):
         clf.fit(X_train, y_train)
         
         # Группируем метрики
-        for score_name, score in calc_scores(clf, X_test, y_test).items():
+        for score_name, score in calc_scores(y_test, clf.predict(X_test)).items():
             scores.setdefault(score_name, []).append(score)
 
     return scores, {score_name: np.round(np.mean(score),2) for score_name, score in scores.items()}
