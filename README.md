@@ -38,7 +38,7 @@ pip install -r requirements.txt
 | RF_article_pca    | 0.6                     | 0.61 | 0.23                |
 | RF_article_no_pca | 0.81                    | 0.82 | 0.64                |
 | RF_custom         | 0.84                    | 0.85 | 0.69                |
-| CNN               | 0.90                    | 0.89 | 0.812               |
+| CNN               | 0.90                    | 0.89 | 0.81                |
 
 article/custom -- классификатор над признакми из статьи/моими
 
