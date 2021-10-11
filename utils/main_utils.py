@@ -52,6 +52,7 @@ def collect_paths_with_meta(path: str, readers: pd.DataFrame) -> pd.DataFrame:
                 if file.endswith('.wav'):
                     # Извлекаем пол диктора
                     reader_gender = readers.loc[int(reader)].GENDER
+                    # И прочую информацию
                     paths_lst.append((int(reader), reader_gender, join(files_path, file)))
                      
     return pd.DataFrame(paths_lst, columns=['reader', 'gender', 'path'])
