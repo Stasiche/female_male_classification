@@ -35,7 +35,7 @@ pip install -r requirements.txt
 | SVM_rbf_custom    | 0.84                    | 0.84 | 0.70                |
 | KNN_article       | 0.60                    | 0.62 | 0.21                |
 | KNN_custom        | 0.78                    | 0.78 | 0.59                |
-| RF_article_pca    | 0.6                     | 0.61 | 0.23                |
+| RF_article_pca    | 0.60                    | 0.61 | 0.23                |
 | RF_article_no_pca | 0.81                    | 0.82 | 0.64                |
 | RF_custom         | 0.84                    | 0.85 | 0.69                |
 | CNN               | 0.90                    | 0.89 | 0.81                |
